@@ -4,44 +4,91 @@ subtitle: "An Introduction to Posit Assistant"
 author:
   - name: Mine Çetinkaya-Rundel
     affiliations:
-      - Professor of the Practice, Duke University
+      - Professor of the Practice, Statistical Science - Duke University
       - Senior Developer Advocate, Posit PBC
 date: today
 format:
   revealjs:
     slide-number: true
-    footer: "ASA Webinar · Posit Assistant"
+    footer: "🔗 [bit.ly/think-first-pa](https://bit.ly/think-first-pa)"
     code-block-height: 500px
     syntax-highlighting: arrow-light
+    logo: false
+    theme: [default, custom.scss]
 execute:
   echo: true
   eval: false
 ---
 
-## Thank You {.center}
+## Thank you {.center}
 
-Special thanks to **François Michonneau** and **Garrett Grolemund** for the original materials this webinar is based on.
+Special thanks to **François Michonneau** (Solutions Engineer, Posit PBC) and **Garrett Grolemund** (Director of Learning, Posit PBC) for the original materials this webinar is based on.
 
-| | |
-|--|--|
-| **François Michonneau** | Solutions Engineer, Posit PBC |
-| **Garrett Grolemund** | Director of Learning, Posit PBC |
+# Part 1: Hello, Posit Assistant!
 
----
+## What is Posit Assistant?
+
+A data analysis assistant that connects to your live R and Python sessions, sees your data, and helps you explore, visualize, build, and debug.
+
+1. Provides **data science skills** — curated context for R, Python, and Posit tools
+2. Encourages a **code-first, token-saving** method
+3. Organizes access to your **R and Python sessions**
+
+## Uses (many of) your preferred LLM providers
+
+- Posit Assistant needs a model provider to power its responses.
+
+- **Posit AI Pass** is the easiest way to get started — a managed service from Posit where you sign in once with no API keys to manage.
+
+- Posit Assistant also supports many other providers including Anthropic, OpenAI, Google Gemini, and local models like Ollama.
+
+## Reads your session
+
+Posit Assistant connects to your **live R and Python sessions** and sees:
+
+- **Loaded packages** — knows what's available without being told
+- **Data frames in memory** — understands your data's structure
+- **Console history** — picks up where you left off
+
+Generated code works with your actual environment, not a generic example.
+
+## Works where you work
+
+Posit Assistant runs across multiple environments:
+
+| Platform | Notes |
+|----------|-------|
+| **Positron** | Pre-installed in recent versions |
+| **RStudio** | Latest release; includes Next-Edit Suggestions |
+| **Terminal** | `pa` TUI for interactive or headless use |
+
+## This webinar: Posit Assistant in Positron {.center}
+
+While Posit Assistant works in RStudio and the terminal too, this webinar introduces it through **Positron** — a free, open-source IDE purpose-built for data science.
+
+# Part 2: Hello, Positron!
 
 ## What is Positron? {.center}
+ 
+::: {.columns}
+
+::: {.column width="30%"}
 
 A free fork of Visual Studio Code purpose-built for **data science**
 
-|  | VS Code | RStudio | **Positron** |
-|--|---------|---------|----------|
-| **Built for** | Software Developers | Data Scientists | Data Scientists |
+:::
+
+::: {.column width="70%"}
+
+![](images/features-explore.svg)
+
+:::
+
+:::
 
 ::: {.callout-tip}
 Get it at [positron.posit.co](https://positron.posit.co)
 :::
-
----
 
 ## Hello Positron
 
@@ -53,17 +100,13 @@ Positron gives data scientists a unified environment to:
 - **Understand** data with dedicated panes
 - **AI** assistance built in
 
----
-
-## Demo: Set Up and Tour of Positron {.center background-color="#2E4057"}
+## Demo: Set up and tour of Positron {.center background-color="#2E4057"}
 
 ::: {.r-fit-text}
 🖥️ Live Demo
 :::
 
----
-
-## Projects = Folders
+## Projects = folders
 
 Quickly set up directories and virtual environments with **New Folder from Template**
 
@@ -71,149 +114,125 @@ Quickly set up directories and virtual environments with **New Folder from Templ
 - Templates include virtual environment setup
 - Git integration built in
 
----
-
-## New Folder from Git
+## New folder from Git
 
 Clone a repository directly into Positron:
 
-```
-https://github.com/posit-conf-2026/positron
-```
+**New → New Folder from Git**
 
-**File → New Folder from Git Repository**
+::: {.demo}
+🖥️ **Demo:** 
 
----
+Clone a repo ([github.com/mine-cetinkaya-rundel/think-first-pa-webinar-asa](https://github.com/mine-cetinkaya-rundel/think-first-pa-webinar-asa)) and inspecting data.
+:::
 
-## Command Palette
+## Command palette
 
-Searchable list of **all commands** in Positron
+Searchable list of **all commands** in Positron -- Type any command name to filter and run it instantly — no need to navigate menus.
 
-::: {.callout-note}
 **Keyboard shortcut:** `Cmd/Ctrl + Shift + P`
-:::
 
-Type any command name to filter and run it instantly — no need to navigate menus.
-
----
-
-## Your Turn: Command Palette {background-color="#1B998B"}
-
-::: {.callout-note appearance="simple"}
-⏱️ 1 minute
-:::
+::: {.demo}
+🖥️ **Demo:**
 
 1. Open the Command Palette with `Cmd/Ctrl + Shift + P`
 2. Find and run the command **Developer: Reload Window**
-
----
-
-## Demo: Cloning a Repo and Inspecting Data {.center background-color="#2E4057"}
-
-::: {.r-fit-text}
-🖥️ Live Demo
 :::
 
-Clone: `https://github.com/posit-conf-2026/positron`
+## Posit Assistant in Positron
 
----
+Posit Assistant is Positron's default AI experience (replacing Positron Assistant and Databot -- see [history of Posit data science agents](https://opensource.posit.co/blog/2026-06-11_history-of-posit-data-science-agents/).
 
-## AI with Positron: Posit Assistant
+::: {.demo}
+🖥️ **Demo:** 
 
-An **AI client within Positron** that adapts LLMs to data science. It:
-
-1. Provides **data science skills** — curated context for R, Python, and Posit tools
-2. Encourages a **code-first, token-saving** method
-3. Organizes access to your **Positron, R, and Python sessions**
-
----
-
-## Posit Assistant: Works Where You Work
-
-Posit Assistant is not Positron-only — it runs across multiple environments:
-
-| Platform | Notes |
-|----------|-------|
-| **Positron** | Pre-installed in recent versions |
-| **RStudio** | Latest release; includes Next-Edit Suggestions |
-| **Terminal** | `pa` TUI for interactive or headless use |
-
----
-
-## Power Positron with Your Preferred LLM
-
-Posit Assistant works with the LLMs you already use:
-
-- OpenAI (GPT-4o, o1, …)
-- Anthropic Claude
-- GitHub Copilot
-- Google Gemini
-- Local models (Ollama)
-- …and more
-
----
-
-## Posit AI Pass
-
-The easiest way to get started — a **managed LLM service from Posit**:
-
-- Sign in **once** with your Posit account — no API keys to manage
-- Access to a curated set of models
-- Designed to work seamlessly with Posit Assistant
-
-::: {.callout-tip}
-[assistant.posit.co/docs/getting-started/posit-ai](https://assistant.posit.co/docs/getting-started/posit-ai/)
-:::
-
----
-
-## Demo: Open and Configure Posit Assistant {.center background-color="#2E4057"}
-
-::: {.r-fit-text}
-🖥️ Live Demo
-:::
-
----
-
-## Follow Along: Assess Data Quality
-
-Open Posit Assistant in the sidebar and ask:
+Open and configure Posit Assistant, then ask
 
 > *Load the data in `credit_raw.csv`. What is the lowest age in the data set? The highest?*
-
-::: {.callout-note appearance="simple"}
-⏱️ 4 minutes
 :::
 
----
+# Part 3: Diving deeper with Posit Assistant
 
-## Posit Assistant Reads Your Session
+## The WEAR philosophy
 
-Posit Assistant connects to your **live R and Python sessions** and sees:
-
-- **Loaded packages** — knows what's available without being told
-- **Data frames in memory** — understands your data's structure
-- **Console history** — picks up where you left off
-
-Generated code works with your actual environment, not a generic example.
-
----
-
-## The WEAR Philosophy
-
-::: {.callout-important}
+::: {.callout-important appearance="simple"}
 **Code is the most auditable way to explore data with AI.**
 :::
 
-Posit Assistant emphasizes a **code-first** workflow:
+- **W**rites R or Phython code
+- Has your computer **E**xecute it
+- **A**nalyzes the results
+- **R**ecaps with suggestions
 
-- Every result is backed by **reproducible code**
-- Skills and context shape the AI's behavior
-- You stay in control — the AI follows your lead
+## Modes: Built-in behavior for different tasks
 
----
+::: {.columns}
 
-## Prompt Advice
+::: {.column}
+
+Posit Assistant has **specialized modes** that adapt its behavior.
+
+:::
+
+::: {.column}
+
+![](images/pa-modes.png){alt="Posit Assistant modes: Normal, Plan mode, Auto mode, Cleaning mode, Ask mode."}
+
+:::
+
+:::
+
+## Normal mode
+
+The default mode for everyday work:
+
+- Write, edit, and debug R and Python code
+- Answer questions about your data or code
+- Build functions, scripts, apps, and reports
+
+No special restrictions — the assistant reads and writes freely, executing code and making changes as needed.
+
+## Auto mode
+
+The assistant takes the **wheel autonomously**, deciding what tools to use and when.
+
+Useful for multi-step tasks where you want it to explore, iterate, and apply changes with minimal back-and-forth — without needing to approve each action.
+
+## Plan mode
+
+Collaborate on a **design before any code changes are made**.
+
+Enter with `/plan`. The assistant will:
+
+- Explore your project with read-only tools
+- Ask clarifying questions about your requirements
+- Write a step-by-step plan file for your approval
+
+Once you approve, it begins implementing immediately.
+
+## Cleaning mode
+
+Purpose-built for **data auditing and tidying**: checks column names, types, distinct values, outliers, and potential data-entry errors — surfacing every substantive cleaning decision for  approval before acting.
+
+## Ask mode
+
+A **read-only** mode for exploring and understanding without any side effects.
+
+Enter with `/ask`. The assistant can read files, search code, and inspect your R/Python session — but cannot modify files, execute code, or use MCP tools.
+
+Exit with `/normal`.
+
+## Cleaning data
+
+::: {.demo}
+🖥️ **Demo:** 
+
+Open Posit Assistant, choose Cleaning mode, and ask it:
+
+> Clean the data in `credit_raw.csv`. Save the clean version of the data as `credit.csv`.
+:::
+
+## Prompt advice
 
 For each prompt, explain:
 
@@ -221,55 +240,21 @@ For each prompt, explain:
 |---------|---------|---------|
 | **Why** | Your ultimate goal | *"I want to understand loan risk…"* |
 | **What** | Clear instructions | *"Fit a logistic regression…"* |
-| **How** | Tools to use | *"…using the `stats` package"* |
+| **How** | Tools to use | *"…using the `tidymodels` package"* |
 
-Good prompts → better, more targeted code.
+Good prompts → "better", more targeted code.
 
----
+## Analyzing data
 
-## Modes: Built-in Behavior for Different Tasks
-
-Posit Assistant has **specialized modes** that adapt its behavior:
-
-- 🧹 **Cleaning mode** — systematic data auditing and tidying
-- 📊 **Analysis mode** — exploration and visualization
-- 🔧 **General mode** — writing and debugging code
-
----
-
-## Your Turn: Clean the Data {background-color="#1B998B"}
-
-::: {.callout-note appearance="simple"}
-⏱️ 6 minutes
-:::
-
-Open Posit Assistant and choose **Cleaning mode**. Ask it to:
-
-> *Clean the data in `credit_raw.csv`. Save the clean version of the data as `credit.csv`.*
-
----
-
-## Your Turn: Build a Predictive Model {background-color="#1B998B"}
-
-::: {.callout-note appearance="simple"}
-⏱️ 6 minutes
-:::
+::: {.demo}
+🖥️ **Demo:** 
 
 Clear the variables. Then ask Posit Assistant:
 
 > *I'm trying to understand the factors associated with loan delinquencies. Please load `credit.csv`. Then fit a simple logistic regression to the data that uses `serious_dlqin_2yrs` as a response variable. Use the `stats` (R) / `statsmodels` (Python) package.*
 
 Follow up until you understand what the model says.
-
----
-
-## Demo: Token Usage, AGENTS.md, and Skills {.center background-color="#2E4057"}
-
-::: {.r-fit-text}
-🖥️ Live Demo
 :::
-
----
 
 ## Memory: AGENTS.md
 
@@ -281,8 +266,6 @@ Posit Assistant can remember context across sessions via **AGENTS.md** files:
 ::: {.callout-tip}
 Full docs: [assistant.posit.co/docs/features/memory](https://assistant.posit.co/docs/features/memory/)
 :::
-
----
 
 ## Skills
 
@@ -298,13 +281,11 @@ Browse available skills: [github.com/posit-dev/skills](https://github.com/posit-
 Docs: [assistant.posit.co/docs/features/skills](https://assistant.posit.co/docs/features/skills/)
 :::
 
----
+## Explore model results
 
-## Your Turn: Explore Model Results {background-color="#1B998B"}
+::: {.demo}
 
-::: {.callout-note appearance="simple"}
-⏱️ 7 minutes
-:::
+🖥️ **Demo:** 
 
 Begin exploring the model with visuals or tables. Pick one prompt and iterate:
 
@@ -312,9 +293,9 @@ Begin exploring the model with visuals or tables. Pick one prompt and iterate:
 - *Use `gt` (R) or `great_tables` (Python) to make a table listing the odds ratio for each predictor.*
 - *Use `ggplot2` (R) or `plotnine` (Python) to make a calibration plot for the model.*
 
----
+:::
 
-## Slash Commands
+## Slash commands
 
 Posit Assistant responds to `/` commands for common tasks:
 
@@ -327,70 +308,54 @@ Posit Assistant responds to `/` commands for common tasks:
 
 Both output commands capture your code in a fully **editable, reproducible** format.
 
----
+## Saving your work
 
-## Your Turn: Save Your Work {background-color="#1B998B"}
+::: {.demo}
 
-::: {.callout-note appearance="simple"}
-⏱️ 5 minutes
-:::
+🖥️ **Demo:** 
 
 Run `/report` or `/notebook` in Posit Assistant to save your code. Then:
 
 - **Quarto**: Click **Preview** at the top of the file
 - **Notebook**: Click **Run All Cells**
 
----
-
-## Demo: Quarto Reports for R and Python {.center background-color="#2E4057"}
-
-::: {.r-fit-text}
-🖥️ Live Demo
 :::
 
----
-
-## Demo: Translating Code Between Languages {.center background-color="#2E4057"}
-
-::: {.r-fit-text}
-🖥️ Live Demo
-:::
+## Translating code between languages
 
 Posit Assistant is excellent at translating between **R and Python**.
 
----
 
-## Your Turn: Build a Shiny App {background-color="#1B998B"}
-
-::: {.callout-note appearance="simple"}
-⏱️ 5 minutes
-:::
+🖥️ **Demo:** 
 
 > *I'd like to experiment with this model fit. Turn `test.R` (or `test.py`) into a Shiny app that lets the user adjust parameters for creating the simulated dataset and then shows the results of fitting the model to the data. Include an action button so the model does not update until the user is finished describing the data.*
 
----
+:::
 
-## What We Covered {.center}
+# Part 4: Next steps
 
-A **multi-lingual, AI-ready IDE** for data scientists:
+## Posit AI Pass
 
-1. ✅ Work in **R and Python**
-2. ✅ Bring your **favorite LLMs**
-3. ✅ Use context to **debug and write code**
-4. ✅ Quickly **clean and explore data**
-5. ✅ Save conversations as **editable Quarto reports and notebooks**
-6. ✅ **Build apps**
+The easiest way to get started — a **managed LLM service from Posit**:
 
----
+- Sign in **once** with your Posit account — no API keys to manage
+- Access to a curated set of models
+- Designed to work seamlessly with Posit Assistant
 
-## Thank You! {.center background-color="#2E4057"}
+::: {.callout-tip}
+[assistant.posit.co/docs/getting-started/posit-ai](https://assistant.posit.co/docs/getting-started/posit-ai/)
+:::
 
-::: {.r-fit-text}
+## Thank you! {.center background-color="#2E4057" footer=false}
+
+::: {.large}
 Questions?
 :::
 
-**François Michonneau** · Solutions Engineer, Posit PBC
+::: {.center}
+🔗 Posit Assistant: [assistant.posit.co](https://assistant.posit.co)
 
-**Garrett Grolemund** · Director of Learning, Posit PBC
+[in Positron](https://assistant.posit.co/docs/downloads/positron/) · [in RStudio](https://assistant.posit.co/docs/downloads/rstudio/) · [in Terminal](https://assistant.posit.co/docs/downloads/tui/)
 
-[positron.posit.co](https://positron.posit.co) · [assistant.posit.co](https://assistant.posit.co)
+🔗 Slides: [bit.ly/think-first-pa](https://bit.ly/think-first-pa)
+:::

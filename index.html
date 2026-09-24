@@ -36,7 +36,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-269a5abb4d74bcec422396e622a76d22.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-e456977dadb7e57c84025f11bb113dae.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -156,7 +156,7 @@
 Mine Çetinkaya-Rundel
 </div>
         <p class="quarto-title-affiliation">
-            Professor of the Practice, Duke University
+            Professor of the Practice, Statistical Science - Duke University
           </p>
         <p class="quarto-title-affiliation">
             Senior Developer Advocate, Posit PBC
@@ -167,48 +167,84 @@ Mine Çetinkaya-Rundel
   <p class="date">2026-09-24</p>
 </section>
 <section id="thank-you" class="slide level2 center">
-<h2>Thank You</h2>
-<p>Special thanks to <strong>François Michonneau</strong> and <strong>Garrett Grolemund</strong> for the original materials this webinar is based on.</p>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td><strong>François Michonneau</strong></td>
-<td>Solutions Engineer, Posit PBC</td>
-</tr>
-<tr class="even">
-<td><strong>Garrett Grolemund</strong></td>
-<td>Director of Learning, Posit PBC</td>
-</tr>
-</tbody>
-</table>
+<h2>Thank you</h2>
+<p>Special thanks to <strong>François Michonneau</strong> (Solutions Engineer, Posit PBC) and <strong>Garrett Grolemund</strong> (Director of Learning, Posit PBC) for the original materials this webinar is based on.</p>
 </section>
-<section id="what-is-positron" class="slide level2 center">
-<h2>What is Positron?</h2>
-<p>A free fork of Visual Studio Code purpose-built for <strong>data science</strong></p>
+<section>
+<section id="part-1-hello-posit-assistant" class="title-slide slide level1 center">
+<h1>Part 1: Hello, Posit Assistant!</h1>
+
+</section>
+<section id="what-is-posit-assistant" class="slide level2">
+<h2>What is Posit Assistant?</h2>
+<p>A data analysis assistant that connects to your live R and Python sessions, sees your data, and helps you explore, visualize, build, and debug.</p>
+<ol type="1">
+<li>Provides <strong>data science skills</strong> — curated context for R, Python, and Posit tools</li>
+<li>Encourages a <strong>code-first, token-saving</strong> method</li>
+<li>Organizes access to your <strong>R and Python sessions</strong></li>
+</ol>
+</section>
+<section id="uses-many-of-your-preferred-llm-providers" class="slide level2">
+<h2>Uses (many of) your preferred LLM providers</h2>
+<ul>
+<li><p>Posit Assistant needs a model provider to power its responses.</p></li>
+<li><p><strong>Posit AI Pass</strong> is the easiest way to get started — a managed service from Posit where you sign in once with no API keys to manage.</p></li>
+<li><p>Posit Assistant also supports many other providers including Anthropic, OpenAI, Google Gemini, and local models like Ollama.</p></li>
+</ul>
+</section>
+<section id="reads-your-session" class="slide level2">
+<h2>Reads your session</h2>
+<p>Posit Assistant connects to your <strong>live R and Python sessions</strong> and sees:</p>
+<ul>
+<li><strong>Loaded packages</strong> — knows what’s available without being told</li>
+<li><strong>Data frames in memory</strong> — understands your data’s structure</li>
+<li><strong>Console history</strong> — picks up where you left off</li>
+</ul>
+<p>Generated code works with your actual environment, not a generic example.</p>
+</section>
+<section id="works-where-you-work" class="slide level2">
+<h2>Works where you work</h2>
+<p>Posit Assistant runs across multiple environments:</p>
 <table class="caption-top">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 30%">
-<col style="width: 30%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th></th>
-<th>VS Code</th>
-<th>RStudio</th>
-<th><strong>Positron</strong></th>
+<th>Platform</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Built for</strong></td>
-<td>Software Developers</td>
-<td>Data Scientists</td>
-<td>Data Scientists</td>
+<td><strong>Positron</strong></td>
+<td>Pre-installed in recent versions</td>
+</tr>
+<tr class="even">
+<td><strong>RStudio</strong></td>
+<td>Latest release; includes Next-Edit Suggestions</td>
+</tr>
+<tr class="odd">
+<td><strong>Terminal</strong></td>
+<td><code>pa</code> TUI for interactive or headless use</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="this-webinar-posit-assistant-in-positron" class="slide level2 center">
+<h2>This webinar: Posit Assistant in Positron</h2>
+<p>While Posit Assistant works in RStudio and the terminal too, this webinar introduces it through <strong>Positron</strong> — a free, open-source IDE purpose-built for data science.</p>
+</section></section>
+<section>
+<section id="part-2-hello-positron" class="title-slide slide level1 center">
+<h1>Part 2: Hello, Positron!</h1>
+
+</section>
+<section id="what-is-positron" class="slide level2 center">
+<h2>What is Positron?</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>A free fork of Visual Studio Code purpose-built for <strong>data science</strong></p>
+</div><div class="column" style="width:70%;">
+<p><img data-src="images/features-explore.svg"></p>
+</div></div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -235,13 +271,13 @@ Mine Çetinkaya-Rundel
 </ul>
 </section>
 <section id="demo-set-up-and-tour-of-positron" class="slide level2 center" data-background-color="#2E4057">
-<h2>Demo: Set Up and Tour of Positron</h2>
+<h2>Demo: Set up and tour of Positron</h2>
 <div class="r-fit-text">
 <p>🖥️ Live Demo</p>
 </div>
 </section>
 <section id="projects-folders" class="slide level2">
-<h2>Projects = Folders</h2>
+<h2>Projects = folders</h2>
 <p>Quickly set up directories and virtual environments with <strong>New Folder from Template</strong></p>
 <ul>
 <li>Start an R or Python project from scratch</li>
@@ -250,179 +286,118 @@ Mine Çetinkaya-Rundel
 </ul>
 </section>
 <section id="new-folder-from-git" class="slide level2">
-<h2>New Folder from Git</h2>
+<h2>New folder from Git</h2>
 <p>Clone a repository directly into Positron:</p>
-<pre><code>https://github.com/posit-conf-2026/positron</code></pre>
-<p><strong>File → New Folder from Git Repository</strong></p>
+<p><strong>New → New Folder from Git</strong></p>
+<div class="demo">
+<p>🖥️ <strong>Demo:</strong></p>
+<p>Clone a repo (<a href="https://github.com/mine-cetinkaya-rundel/think-first-pa-webinar-asa">github.com/mine-cetinkaya-rundel/think-first-pa-webinar-asa</a>) and inspecting data.</p>
+</div>
 </section>
 <section id="command-palette" class="slide level2">
-<h2>Command Palette</h2>
-<p>Searchable list of <strong>all commands</strong> in Positron</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
+<h2>Command palette</h2>
+<p>Searchable list of <strong>all commands</strong> in Positron – Type any command name to filter and run it instantly — no need to navigate menus.</p>
 <p><strong>Keyboard shortcut:</strong> <code>Cmd/Ctrl + Shift + P</code></p>
-</div>
-</div>
-</div>
-<p>Type any command name to filter and run it instantly — no need to navigate menus.</p>
-</section>
-<section id="your-turn-command-palette" class="slide level2" data-background-color="#1B998B">
-<h2>Your Turn: Command Palette</h2>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>⏱️ 1 minute</p>
-</div>
-</div>
-</div>
+<div class="demo">
+<p>🖥️ <strong>Demo:</strong></p>
 <ol type="1">
 <li>Open the Command Palette with <code>Cmd/Ctrl + Shift + P</code></li>
 <li>Find and run the command <strong>Developer: Reload Window</strong></li>
 </ol>
-</section>
-<section id="demo-cloning-a-repo-and-inspecting-data" class="slide level2 center" data-background-color="#2E4057">
-<h2>Demo: Cloning a Repo and Inspecting Data</h2>
-<div class="r-fit-text">
-<p>🖥️ Live Demo</p>
-</div>
-<p>Clone: <code>https://github.com/posit-conf-2026/positron</code></p>
-</section>
-<section id="ai-with-positron-posit-assistant" class="slide level2">
-<h2>AI with Positron: Posit Assistant</h2>
-<p>An <strong>AI client within Positron</strong> that adapts LLMs to data science. It:</p>
-<ol type="1">
-<li>Provides <strong>data science skills</strong> — curated context for R, Python, and Posit tools</li>
-<li>Encourages a <strong>code-first, token-saving</strong> method</li>
-<li>Organizes access to your <strong>Positron, R, and Python sessions</strong></li>
-</ol>
-</section>
-<section id="posit-assistant-works-where-you-work" class="slide level2">
-<h2>Posit Assistant: Works Where You Work</h2>
-<p>Posit Assistant is not Positron-only — it runs across multiple environments:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Platform</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Positron</strong></td>
-<td>Pre-installed in recent versions</td>
-</tr>
-<tr class="even">
-<td><strong>RStudio</strong></td>
-<td>Latest release; includes Next-Edit Suggestions</td>
-</tr>
-<tr class="odd">
-<td><strong>Terminal</strong></td>
-<td><code>pa</code> TUI for interactive or headless use</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="power-positron-with-your-preferred-llm" class="slide level2">
-<h2>Power Positron with Your Preferred LLM</h2>
-<p>Posit Assistant works with the LLMs you already use:</p>
-<ul>
-<li>OpenAI (GPT-4o, o1, …)</li>
-<li>Anthropic Claude</li>
-<li>GitHub Copilot</li>
-<li>Google Gemini</li>
-<li>Local models (Ollama)</li>
-<li>…and more</li>
-</ul>
-</section>
-<section id="posit-ai-pass" class="slide level2">
-<h2>Posit AI Pass</h2>
-<p>The easiest way to get started — a <strong>managed LLM service from Posit</strong>:</p>
-<ul>
-<li>Sign in <strong>once</strong> with your Posit account — no API keys to manage</li>
-<li>Access to a curated set of models</li>
-<li>Designed to work seamlessly with Posit Assistant</li>
-</ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p><a href="https://assistant.posit.co/docs/getting-started/posit-ai/">assistant.posit.co/docs/getting-started/posit-ai</a></p>
-</div>
-</div>
 </div>
 </section>
-<section id="demo-open-and-configure-posit-assistant" class="slide level2 center" data-background-color="#2E4057">
-<h2>Demo: Open and Configure Posit Assistant</h2>
-<div class="r-fit-text">
-<p>🖥️ Live Demo</p>
-</div>
-</section>
-<section id="follow-along-assess-data-quality" class="slide level2">
-<h2>Follow Along: Assess Data Quality</h2>
-<p>Open Posit Assistant in the sidebar and ask:</p>
+<section id="posit-assistant-in-positron" class="slide level2">
+<h2>Posit Assistant in Positron</h2>
+<p>Posit Assistant is Positron’s default AI experience (replacing Positron Assistant and Databot – see <a href="https://opensource.posit.co/blog/2026-06-11_history-of-posit-data-science-agents/">history of Posit data science agents</a>.</p>
+<div class="demo">
+<p>🖥️ <strong>Demo:</strong></p>
+<p>Open and configure Posit Assistant, then ask</p>
 <blockquote>
 <p><em>Load the data in <code>credit_raw.csv</code>. What is the lowest age in the data set? The highest?</em></p>
 </blockquote>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<div class="callout-content">
-<p>⏱️ 4 minutes</p>
-</div>
-</div>
-</div>
-</section>
-<section id="posit-assistant-reads-your-session" class="slide level2">
-<h2>Posit Assistant Reads Your Session</h2>
-<p>Posit Assistant connects to your <strong>live R and Python sessions</strong> and sees:</p>
-<ul>
-<li><strong>Loaded packages</strong> — knows what’s available without being told</li>
-<li><strong>Data frames in memory</strong> — understands your data’s structure</li>
-<li><strong>Console history</strong> — picks up where you left off</li>
-</ul>
-<p>Generated code works with your actual environment, not a generic example.</p>
+</section></section>
+<section>
+<section id="part-3-diving-deeper-with-posit-assistant" class="title-slide slide level1 center">
+<h1>Part 3: Diving deeper with Posit Assistant</h1>
+
 </section>
 <section id="the-wear-philosophy" class="slide level2">
-<h2>The WEAR Philosophy</h2>
-<div class="callout callout-important callout-titled callout-style-default">
+<h2>The WEAR philosophy</h2>
+<div class="callout callout-important callout-style-simple">
 <div class="callout-body">
-<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
 <p><strong>Code is the most auditable way to explore data with AI.</strong></p>
 </div>
 </div>
 </div>
-<p>Posit Assistant emphasizes a <strong>code-first</strong> workflow:</p>
 <ul>
-<li>Every result is backed by <strong>reproducible code</strong></li>
-<li>Skills and context shape the AI’s behavior</li>
-<li>You stay in control — the AI follows your lead</li>
+<li><strong>W</strong>rites R or Phython code</li>
+<li>Has your computer <strong>E</strong>xecute it</li>
+<li><strong>A</strong>nalyzes the results</li>
+<li><strong>R</strong>ecaps with suggestions</li>
 </ul>
 </section>
+<section id="modes-built-in-behavior-for-different-tasks" class="slide level2">
+<h2>Modes: Built-in behavior for different tasks</h2>
+<div class="columns">
+<div class="column">
+<p>Posit Assistant has <strong>specialized modes</strong> that adapt its behavior.</p>
+</div><div class="column">
+<p><img data-src="images/pa-modes.png" alt="Posit Assistant modes: Normal, Plan mode, Auto mode, Cleaning mode, Ask mode."></p>
+</div></div>
+</section>
+<section id="normal-mode" class="slide level2">
+<h2>Normal mode</h2>
+<p>The default mode for everyday work:</p>
+<ul>
+<li>Write, edit, and debug R and Python code</li>
+<li>Answer questions about your data or code</li>
+<li>Build functions, scripts, apps, and reports</li>
+</ul>
+<p>No special restrictions — the assistant reads and writes freely, executing code and making changes as needed.</p>
+</section>
+<section id="auto-mode" class="slide level2">
+<h2>Auto mode</h2>
+<p>The assistant takes the <strong>wheel autonomously</strong>, deciding what tools to use and when.</p>
+<p>Useful for multi-step tasks where you want it to explore, iterate, and apply changes with minimal back-and-forth — without needing to approve each action.</p>
+</section>
+<section id="plan-mode" class="slide level2">
+<h2>Plan mode</h2>
+<p>Collaborate on a <strong>design before any code changes are made</strong>.</p>
+<p>Enter with <code>/plan</code>. The assistant will:</p>
+<ul>
+<li>Explore your project with read-only tools</li>
+<li>Ask clarifying questions about your requirements</li>
+<li>Write a step-by-step plan file for your approval</li>
+</ul>
+<p>Once you approve, it begins implementing immediately.</p>
+</section>
+<section id="cleaning-mode" class="slide level2">
+<h2>Cleaning mode</h2>
+<p>Purpose-built for <strong>data auditing and tidying</strong>: checks column names, types, distinct values, outliers, and potential data-entry errors — surfacing every substantive cleaning decision for approval before acting.</p>
+</section>
+<section id="ask-mode" class="slide level2">
+<h2>Ask mode</h2>
+<p>A <strong>read-only</strong> mode for exploring and understanding without any side effects.</p>
+<p>Enter with <code>/ask</code>. The assistant can read files, search code, and inspect your R/Python session — but cannot modify files, execute code, or use MCP tools.</p>
+<p>Exit with <code>/normal</code>.</p>
+</section>
+<section id="cleaning-data" class="slide level2">
+<h2>Cleaning data</h2>
+<div class="demo">
+<p>🖥️ <strong>Demo:</strong></p>
+<p>Open Posit Assistant, choose Cleaning mode, and ask it:</p>
+<blockquote>
+<p>Clean the data in <code>credit_raw.csv</code>. Save the clean version of the data as <code>credit.csv</code>.</p>
+</blockquote>
+</div>
+</section>
 <section id="prompt-advice" class="slide level2">
-<h2>Prompt Advice</h2>
+<h2>Prompt advice</h2>
 <p>For each prompt, explain:</p>
 <table class="caption-top">
 <thead>
@@ -446,60 +421,21 @@ Mine Çetinkaya-Rundel
 <tr class="odd">
 <td><strong>How</strong></td>
 <td>Tools to use</td>
-<td><em>“…using the <code>stats</code> package”</em></td>
+<td><em>“…using the <code>tidymodels</code> package”</em></td>
 </tr>
 </tbody>
 </table>
-<p>Good prompts → better, more targeted code.</p>
+<p>Good prompts → “better”, more targeted code.</p>
 </section>
-<section id="modes-built-in-behavior-for-different-tasks" class="slide level2">
-<h2>Modes: Built-in Behavior for Different Tasks</h2>
-<p>Posit Assistant has <strong>specialized modes</strong> that adapt its behavior:</p>
-<ul>
-<li>🧹 <strong>Cleaning mode</strong> — systematic data auditing and tidying</li>
-<li>📊 <strong>Analysis mode</strong> — exploration and visualization</li>
-<li>🔧 <strong>General mode</strong> — writing and debugging code</li>
-</ul>
-</section>
-<section id="your-turn-clean-the-data" class="slide level2" data-background-color="#1B998B">
-<h2>Your Turn: Clean the Data</h2>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>⏱️ 6 minutes</p>
-</div>
-</div>
-</div>
-<p>Open Posit Assistant and choose <strong>Cleaning mode</strong>. Ask it to:</p>
-<blockquote>
-<p><em>Clean the data in <code>credit_raw.csv</code>. Save the clean version of the data as <code>credit.csv</code>.</em></p>
-</blockquote>
-</section>
-<section id="your-turn-build-a-predictive-model" class="slide level2" data-background-color="#1B998B">
-<h2>Your Turn: Build a Predictive Model</h2>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>⏱️ 6 minutes</p>
-</div>
-</div>
-</div>
+<section id="analyzing-data" class="slide level2">
+<h2>Analyzing data</h2>
+<div class="demo">
+<p>🖥️ <strong>Demo:</strong></p>
 <p>Clear the variables. Then ask Posit Assistant:</p>
 <blockquote>
 <p><em>I’m trying to understand the factors associated with loan delinquencies. Please load <code>credit.csv</code>. Then fit a simple logistic regression to the data that uses <code>serious_dlqin_2yrs</code> as a response variable. Use the <code>stats</code> (R) / <code>statsmodels</code> (Python) package.</em></p>
 </blockquote>
 <p>Follow up until you understand what the model says.</p>
-</section>
-<section id="demo-token-usage-agents.md-and-skills" class="slide level2 center" data-background-color="#2E4057">
-<h2>Demo: Token Usage, AGENTS.md, and Skills</h2>
-<div class="r-fit-text">
-<p>🖥️ Live Demo</p>
 </div>
 </section>
 <section id="memory-agents.md" class="slide level2">
@@ -546,27 +482,20 @@ Mine Çetinkaya-Rundel
 </div>
 </div>
 </section>
-<section id="your-turn-explore-model-results" class="slide level2" data-background-color="#1B998B">
-<h2>Your Turn: Explore Model Results</h2>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>⏱️ 7 minutes</p>
-</div>
-</div>
-</div>
+<section id="explore-model-results" class="slide level2">
+<h2>Explore model results</h2>
+<div class="demo">
+<p>🖥️ <strong>Demo:</strong></p>
 <p>Begin exploring the model with visuals or tables. Pick one prompt and iterate:</p>
 <ul>
 <li><em>Draw an ROC curve for the model.</em></li>
 <li><em>Use <code>gt</code> (R) or <code>great_tables</code> (Python) to make a table listing the odds ratio for each predictor.</em></li>
 <li><em>Use <code>ggplot2</code> (R) or <code>plotnine</code> (Python) to make a calibration plot for the model.</em></li>
 </ul>
+</div>
 </section>
 <section id="slash-commands" class="slide level2">
-<h2>Slash Commands</h2>
+<h2>Slash commands</h2>
 <p>Posit Assistant responds to <code>/</code> commands for common tasks:</p>
 <table class="caption-top">
 <thead>
@@ -596,80 +525,69 @@ Mine Çetinkaya-Rundel
 </table>
 <p>Both output commands capture your code in a fully <strong>editable, reproducible</strong> format.</p>
 </section>
-<section id="your-turn-save-your-work" class="slide level2" data-background-color="#1B998B">
-<h2>Your Turn: Save Your Work</h2>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>⏱️ 5 minutes</p>
-</div>
-</div>
-</div>
+<section id="saving-your-work" class="slide level2">
+<h2>Saving your work</h2>
+<div class="demo">
+<p>🖥️ <strong>Demo:</strong></p>
 <p>Run <code>/report</code> or <code>/notebook</code> in Posit Assistant to save your code. Then:</p>
 <ul>
 <li><strong>Quarto</strong>: Click <strong>Preview</strong> at the top of the file</li>
 <li><strong>Notebook</strong>: Click <strong>Run All Cells</strong></li>
 </ul>
-</section>
-<section id="demo-quarto-reports-for-r-and-python" class="slide level2 center" data-background-color="#2E4057">
-<h2>Demo: Quarto Reports for R and Python</h2>
-<div class="r-fit-text">
-<p>🖥️ Live Demo</p>
 </div>
 </section>
-<section id="demo-translating-code-between-languages" class="slide level2 center" data-background-color="#2E4057">
-<h2>Demo: Translating Code Between Languages</h2>
-<div class="r-fit-text">
-<p>🖥️ Live Demo</p>
-</div>
+<section id="translating-code-between-languages" class="slide level2">
+<h2>Translating code between languages</h2>
 <p>Posit Assistant is excellent at translating between <strong>R and Python</strong>.</p>
-</section>
-<section id="your-turn-build-a-shiny-app" class="slide level2" data-background-color="#1B998B">
-<h2>Your Turn: Build a Shiny App</h2>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>⏱️ 5 minutes</p>
-</div>
-</div>
-</div>
+<p>🖥️ <strong>Demo:</strong></p>
 <blockquote>
 <p><em>I’d like to experiment with this model fit. Turn <code>test.R</code> (or <code>test.py</code>) into a Shiny app that lets the user adjust parameters for creating the simulated dataset and then shows the results of fitting the model to the data. Include an action button so the model does not update until the user is finished describing the data.</em></p>
 </blockquote>
-</section>
-<section id="what-we-covered" class="slide level2 center">
-<h2>What We Covered</h2>
-<p>A <strong>multi-lingual, AI-ready IDE</strong> for data scientists:</p>
-<ol type="1">
-<li>✅ Work in <strong>R and Python</strong></li>
-<li>✅ Bring your <strong>favorite LLMs</strong></li>
-<li>✅ Use context to <strong>debug and write code</strong></li>
-<li>✅ Quickly <strong>clean and explore data</strong></li>
-<li>✅ Save conversations as <strong>editable Quarto reports and notebooks</strong></li>
-<li>✅ <strong>Build apps</strong></li>
-</ol>
-</section>
-<section id="thank-you-1" class="slide level2 center" data-background-color="#2E4057">
-<h2>Thank You!</h2>
-<div class="r-fit-text">
-<p>Questions?</p>
-</div>
-<p><strong>François Michonneau</strong> · Solutions Engineer, Posit PBC</p>
-<p><strong>Garrett Grolemund</strong> · Director of Learning, Posit PBC</p>
-<p><a href="https://positron.posit.co">positron.posit.co</a> · <a href="https://assistant.posit.co">assistant.posit.co</a></p>
+<p>:::</p>
+</section></section>
+<section>
+<section id="part-4-next-steps" class="title-slide slide level1 center">
+<h1>Part 4: Next steps</h1>
 
 </section>
+<section id="posit-ai-pass" class="slide level2">
+<h2>Posit AI Pass</h2>
+<p>The easiest way to get started — a <strong>managed LLM service from Posit</strong>:</p>
+<ul>
+<li>Sign in <strong>once</strong> with your Posit account — no API keys to manage</li>
+<li>Access to a curated set of models</li>
+<li>Designed to work seamlessly with Posit Assistant</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="https://assistant.posit.co/docs/getting-started/posit-ai/">assistant.posit.co/docs/getting-started/posit-ai</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="thank-you-1" class="slide level2 center" data-background-color="#2E4057" data-footer="false">
+<h2>Thank you!</h2>
+<div class="large">
+<p>Questions?</p>
+</div>
+<div class="center">
+<p>🔗 Posit Assistant: <a href="https://assistant.posit.co">assistant.posit.co</a></p>
+<p><a href="https://assistant.posit.co/docs/downloads/positron/">in Positron</a> · <a href="https://assistant.posit.co/docs/downloads/rstudio/">in RStudio</a> · <a href="https://assistant.posit.co/docs/downloads/tui/">in Terminal</a></p>
+<p>🔗 Slides: <a href="https://bit.ly/think-first-pa">bit.ly/think-first-pa</a></p>
+</div>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="_brand/logos/posit-horiz-full-color.png" alt="Posit logo." class="slide-logo"></p>
 <div class="footer footer-default">
-<p>ASA Webinar · Posit Assistant</p>
+<p>🔗 <a href="https://bit.ly/think-first-pa">bit.ly/think-first-pa</a></p>
 </div>
 </div></div>
 

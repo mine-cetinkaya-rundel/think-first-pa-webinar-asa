@@ -1,0 +1,36 @@
+/*-- scss:rules --*/
+
+.medium {
+  font-size: 0.8em;
+}
+
+.large {
+  font-size: 4em;
+}
+
+.center {
+  text-align: center;
+}
+
+.demo {
+  background-color: #2E4057;
+  color: #ffffff;
+  font-size: 0.8em;
+  padding: 0.6em 1em;
+  border-radius: 6px;
+  margin-top: 1em;
+
+  p {
+    margin: 0;
+    color: #ffffff;
+  }
+
+  strong {
+    color: #ffffff;
+  }
+
+  code {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
