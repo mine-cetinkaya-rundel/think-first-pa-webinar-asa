@@ -269,15 +269,49 @@ Full docs: [assistant.posit.co/docs/features/memory](https://assistant.posit.co/
 
 ## Skills
 
-Skills provide **curated domain knowledge** to the assistant:
+Skills are **specialized modules of instructions** that Posit Assistant loads automatically when relevant — or you can invoke them directly with `/skill-name`.
 
-- Data cleaning, visualization, modeling
-- Package-specific guidance (tidymodels, scikit-learn, bslib, …)
-- Custom skills for your organization
+## Built-in skills
+
+::: {.small}
+
+| Skill | Description |
+|---|---|
+| `create-skill` | Create new Agent Skills following the specification |
+| `import-instructions` | Migrate Positron, Copilot, Claude Code, and VS Code instruction files into Posit Assistant skills |
+| `posit-products` | Use Positron IDE and Posit Workbench; deploy to Posit Connect and Posit Connect Cloud |
+| `predictive-modeling-python` | Modeling and machine learning with scikit-learn in Python |
+| `predictive-modeling-r` | Modeling and machine learning with tidymodels in R |
+| `quarto-authoring` | Write and author Quarto documents (.qmd) |
+| `report` | Create Quarto documents or notebooks from conversations |
+| `r-package-development` | R package development with devtools, testthat, and roxygen2 |
+| `shiny-bslib` | Build modern Shiny dashboards and apps with bslib |
+| `shiny-bslib-theming` | Advanced theming for Shiny apps using bslib and Bootstrap 5 |
+| `snowflake` | Connect to Snowflake and query data via semantic views |
+
+: {tbl-colwidths="[35,65]"}
+
+:::
+
+## Custom skills {.smaller}
+
+You can add your own skills at two levels:
+
+- **User-level** — `~/.posit/assistant/skills/{skill-name}/` — available across all projects
+- **Project-level** — `.posit/assistant/skills/{skill-name}/` in your project root — scoped to one project
+
+Each skill is a folder with a `SKILL.md` file:
+
+```markdown
+---
+name: my-skill
+description: When to use this skill.
+---
+# My Skill
+Instructions for the assistant to follow when this skill is active.
+```
 
 ::: {.callout-tip}
-Browse available skills: [github.com/posit-dev/skills](https://github.com/posit-dev/skills)
-
 Docs: [assistant.posit.co/docs/features/skills](https://assistant.posit.co/docs/features/skills/)
 :::
 
@@ -333,6 +367,12 @@ Posit Assistant is excellent at translating between **R and Python**.
 :::
 
 # Part 4: Next steps
+
+## Posit Assistant suggests next steps
+
+As you work, Posit Assistant proactively surfaces **tips and suggestions** — things like improving your workflow, setting up memory, or using a relevant feature you might not know about.
+
+![](images/pa-tip.png){fig-alt="Posit Assistant tip suggesting to add an AGENTS.md memory file to the project root for persistent context."}
 
 ## Posit AI Pass
 
