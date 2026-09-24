@@ -15,9 +15,6 @@ format:
     syntax-highlighting: arrow-light
     logo: false
     theme: [default, custom.scss]
-execute:
-  echo: true
-  eval: false
 ---
 
 ## Thank you {.center}
