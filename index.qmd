@@ -374,6 +374,16 @@ As you work, Posit Assistant proactively surfaces **tips and suggestions** — t
 
 ![](images/pa-tip.png){fig-alt="Posit Assistant tip suggesting to add an AGENTS.md memory file to the project root for persistent context."}
 
+## Next Edit Suggestions
+
+A separate AI feature — not Posit Assistant — built into Positron and RStudio.
+
+As you edit code, it **predicts and proposes your next change** inline, right in the editor. Tab to accept.
+
+::: {.callout-note}
+Next Edit Suggestions requires a model provider configured in Positron, but operates independently of the Posit Assistant chat panel.
+:::
+
 ## Posit AI Pass
 
 The easiest way to get started — a **managed LLM service from Posit**:
