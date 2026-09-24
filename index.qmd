@@ -362,18 +362,6 @@ Run `/report` or `/notebook` in Posit Assistant to save your code. Then:
 
 :::
 
-## Translating code between languages
-
-Excellent at translating between R and Python!
-
-
-::: {.demo}
-🖥️ **Demo:** 
-
-> *I'd like to experiment with this model fit. Turn `test.R` (or `test.py`) into a Shiny app that lets the user adjust parameters for creating the simulated dataset and then shows the results of fitting the model to the data. Include an action button so the model does not update until the user is finished describing the data.*
-
-:::
-
 # Part 4: Next steps
 
 ## Tips and suggestions
