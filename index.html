@@ -267,6 +267,7 @@ Mine Çetinkaya-Rundel
 <li><strong>Console history</strong> — picks up where you left off</li>
 </ul>
 <p>Generated code works with your actual environment, not a generic example.</p>
+<p>You can toggle session context on or off with the <strong>eye icon</strong> in the status bar — useful when you want a generic answer uninfluenced by your current environment.</p>
 </section>
 <section id="works-where-you-work" class="slide level2">
 <h2>Works where you work</h2>
@@ -632,10 +633,15 @@ Mine Çetinkaya-Rundel
 </ul>
 </div>
 </section>
-<section id="slash-commands" class="slide level2">
+<section id="slash-commands" class="slide level2 smaller">
 <h2>Slash commands</h2>
 <p>Posit Assistant responds to <code>/</code> commands for common tasks:</p>
+<div class="medium">
 <table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Command</th>
@@ -645,23 +651,48 @@ Mine Çetinkaya-Rundel
 <tbody>
 <tr class="odd">
 <td><code>/report</code></td>
-<td>Generate a Quarto document (<code>.qmd</code>)</td>
+<td>Create a Quarto document from the conversation</td>
 </tr>
 <tr class="even">
 <td><code>/notebook</code></td>
-<td>Generate a Jupyter notebook (<code>.ipynb</code>)</td>
+<td>Export the conversation as a Jupyter notebook</td>
 </tr>
 <tr class="odd">
+<td><code>/savememory</code></td>
+<td>Create or update the project memory file (<code>AGENTS.md</code>)</td>
+</tr>
+<tr class="even">
 <td><code>/plan</code></td>
-<td>Design an approach before writing code</td>
+<td>Enter Plan mode — design an approach before writing code</td>
+</tr>
+<tr class="odd">
+<td><code>/ask</code></td>
+<td>Enter Ask mode — read-only exploration, no changes made</td>
 </tr>
 <tr class="even">
 <td><code>/compact</code></td>
 <td>Summarize the conversation to reduce token usage</td>
 </tr>
+<tr class="odd">
+<td><code>/microcompact</code></td>
+<td>Replace tool results with placeholders to reduce token usage</td>
+</tr>
+<tr class="even">
+<td><code>/context</code></td>
+<td>Show session context and token usage for the current conversation</td>
+</tr>
+<tr class="odd">
+<td><code>/new</code></td>
+<td>Start a new conversation</td>
+</tr>
+<tr class="even">
+<td><code>/clear</code></td>
+<td>Start a new conversation, keeping current model settings</td>
+</tr>
 </tbody>
 </table>
-<p>Both output commands capture your code in a fully <strong>editable, reproducible</strong> format.</p>
+</div>
+<p>Skills also appear in the <code>/</code> menu — type <code>/skill-name</code> to invoke any skill directly.</p>
 </section>
 <section id="saving-your-work" class="slide level2">
 <h2>Saving your work</h2>

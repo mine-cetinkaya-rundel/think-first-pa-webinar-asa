@@ -52,6 +52,8 @@ Posit Assistant connects to your **live R and Python sessions** and sees:
 
 Generated code works with your actual environment, not a generic example.
 
+You can toggle session context on or off with the **eye icon** in the status bar — useful when you want a generic answer uninfluenced by your current environment.
+
 ## Works where you work
 
 Posit Assistant runs across multiple environments:
@@ -329,18 +331,30 @@ Begin exploring the model with visuals or tables. Pick one prompt and iterate:
 
 :::
 
-## Slash commands
+## Slash commands {.smaller}
 
 Posit Assistant responds to `/` commands for common tasks:
 
+::: {.medium}
+
 | Command | What it does |
 |---------|-------------|
-| `/report` | Generate a Quarto document (`.qmd`) |
-| `/notebook` | Generate a Jupyter notebook (`.ipynb`) |
-| `/plan` | Design an approach before writing code |
+| `/report` | Create a Quarto document from the conversation |
+| `/notebook` | Export the conversation as a Jupyter notebook |
+| `/savememory` | Create or update the project memory file (`AGENTS.md`) |
+| `/plan` | Enter Plan mode — design an approach before writing code |
+| `/ask` | Enter Ask mode — read-only exploration, no changes made |
 | `/compact` | Summarize the conversation to reduce token usage |
+| `/microcompact` | Replace tool results with placeholders to reduce token usage |
+| `/context` | Show session context and token usage for the current conversation |
+| `/new` | Start a new conversation |
+| `/clear` | Start a new conversation, keeping current model settings |
 
-Both output commands capture your code in a fully **editable, reproducible** format.
+: {tbl-colwidths="[20,80]"}
+
+:::
+
+Skills also appear in the `/` menu — type `/skill-name` to invoke any skill directly.
 
 ## Saving your work
 
