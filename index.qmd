@@ -1,5 +1,5 @@
 ---
-title: "Think First, Let the Code Follow"
+title: "Think First,<br>Let the Code Follow"
 subtitle: "An Introduction to Posit Assistant"
 author:
   - name: Mine Çetinkaya-Rundel
@@ -22,7 +22,7 @@ execute:
 
 ## Thank you {.center}
 
-Special thanks to **François Michonneau** (Solutions Engineer, Posit PBC) and **Garrett Grolemund** (Director of Learning, Posit PBC) for the original materials this webinar is based on.
+Special thanks to **Garrett Grolemund** (Director of Learning, Posit PBC) and **François Michonneau** (Solutions Engineer, Posit PBC) for the original materials this webinar is based on.
 
 # Part 1: Hello, Posit Assistant!
 
@@ -30,21 +30,25 @@ Special thanks to **François Michonneau** (Solutions Engineer, Posit PBC) and *
 
 A data analysis assistant that connects to your live R and Python sessions, sees your data, and helps you explore, visualize, build, and debug.
 
-1. Provides **data science skills** — curated context for R, Python, and Posit tools
-2. Encourages a **code-first, token-saving** method
-3. Organizes access to your **R and Python sessions**
+- Comes with data science skills with curated context for R, Python, and Posit tools
+- Encourages a code-first method
+- Operates in your R and Python sessions
 
-## Uses (many of) your preferred LLM providers
+## Uses your* preferred LLM providers
 
-- Posit Assistant needs a model provider to power its responses.
+- Needs a model provider to power its responses
 
-- **Posit AI Pass** is the easiest way to get started — a managed service from Posit where you sign in once with no API keys to manage.
+- **Posit AI Pass**, a managed service from Posit where you sign in once with no API keys to manage, is the easiest way to get started
 
-- Posit Assistant also supports many other providers including Anthropic, OpenAI, Google Gemini, and local models like Ollama.
+- Also supports many other providers including Anthropic, OpenAI, Google Gemini, and local models like Ollama
 
-## Reads your session
+::: aside
+At least *many of* your preferred LLM providers
+:::
 
-Posit Assistant connects to your **live R and Python sessions** and sees:
+## Reads your session {.smaller}
+
+Connects to your live R and Python sessions and sees:
 
 - **Loaded packages** — knows what's available without being told
 - **Data frames in memory** — understands your data's structure
@@ -52,7 +56,9 @@ Posit Assistant connects to your **live R and Python sessions** and sees:
 
 Generated code works with your actual environment, not a generic example.
 
+::: {.callout-tip appearance="simple"}
 You can toggle session context on or off with the **eye icon** in the status bar — useful when you want a generic answer uninfluenced by your current environment.
+:::
 
 ## Works where you work
 
@@ -64,13 +70,13 @@ Posit Assistant runs across multiple environments:
 | **RStudio** | Latest release; includes Next-Edit Suggestions |
 | **Terminal** | `pa` TUI for interactive or headless use |
 
-## This webinar: Posit Assistant in Positron {.center}
+## This webinar:<br>Posit Assistant in Positron {.center}
 
-While Posit Assistant works in RStudio and the terminal too, this webinar introduces it through **Positron** — a free, open-source IDE purpose-built for data science.
+While Posit Assistant works in RStudio and the terminal too, this webinar introduces it through **Positron**.
 
 # Part 2: Hello, Positron!
 
-## What is Positron? {.center}
+## What is Positron?
  
 ::: {.columns}
 
@@ -88,24 +94,8 @@ A free fork of Visual Studio Code purpose-built for **data science**
 
 :::
 
-::: {.callout-tip}
+::: {.callout-tip appearance="simple"}
 Get it at [positron.posit.co](https://positron.posit.co)
-:::
-
-## Hello Positron
-
-Positron gives data scientists a unified environment to:
-
-- **Write** code (R and Python)
-- **Run** analyses interactively
-- **Manage** packages and environments
-- **Understand** data with dedicated panes
-- **AI** assistance built in
-
-## Demo: Set up and tour of Positron {.center background-color="#2E4057"}
-
-::: {.r-fit-text}
-🖥️ Live Demo
 :::
 
 ## Projects = folders
@@ -125,8 +115,12 @@ Clone a repository directly into Positron:
 ::: {.demo}
 🖥️ **Demo:** 
 
-Clone a repo ([github.com/mine-cetinkaya-rundel/think-first-pa-webinar-asa](https://github.com/mine-cetinkaya-rundel/think-first-pa-webinar-asa)) and inspecting data.
+Clone a repo ([github.com/mine-cetinkaya-rundel/think-first-pa-webinar-asa](https://github.com/mine-cetinkaya-rundel/think-first-pa-webinar-asa)) and take a tour of Positron. 
 :::
+
+## Positron at a glance {.center}
+
+![](images/positron.png){fig-alt="Positron IDE with areas marked for manage/AI, write, run, understand."}
 
 ## Command palette
 
@@ -148,7 +142,7 @@ Posit Assistant is Positron's default AI experience (replacing Positron Assistan
 ::: {.demo}
 🖥️ **Demo:** 
 
-Open and configure Posit Assistant, then ask
+Open Posit Assistant, then ask
 
 > *Load the data in `credit_raw.csv`. What is the lowest age in the data set? The highest?*
 :::
@@ -161,7 +155,7 @@ Open and configure Posit Assistant, then ask
 **Code is the most auditable way to explore data with AI.**
 :::
 
-- **W**rites R or Phython code
+- **W**rites R or Python code
 - Has your computer **E**xecute it
 - **A**nalyzes the results
 - **R**ecaps with suggestions
@@ -196,33 +190,32 @@ No special restrictions — the assistant reads and writes freely, executing cod
 
 ## Auto mode
 
-The assistant takes the **wheel autonomously**, deciding what tools to use and when.
+- The assistant takes the wheel autonomously, deciding what tools to use and when
 
-Useful for multi-step tasks where you want it to explore, iterate, and apply changes with minimal back-and-forth — without needing to approve each action.
+- Useful for multi-step tasks where you want it to explore, iterate, and apply changes with minimal back-and-forth — without needing to approve each action
 
 ## Plan mode
 
-Collaborate on a **design before any code changes are made**.
+- Collaborate on a design before any code changes are made
 
-Enter with `/plan`. The assistant will:
+- Enter with `/plan` -- can
+  - explore your project with read-only tools
+  - ask clarifying questions about your requirements
+  - write a step-by-step plan file for your approval
 
-- Explore your project with read-only tools
-- Ask clarifying questions about your requirements
-- Write a step-by-step plan file for your approval
-
-Once you approve, it begins implementing immediately.
+- Once you approve, it begins implementing immediately
 
 ## Cleaning mode
 
-Purpose-built for **data auditing and tidying**: checks column names, types, distinct values, outliers, and potential data-entry errors — surfacing every substantive cleaning decision for  approval before acting.
+Purpose-built for data auditing and tidying: checks column names, types, distinct values, outliers, and potential data-entry errors — surfacing every substantive cleaning decision for  approval before acting.
 
 ## Ask mode
 
-A **read-only** mode for exploring and understanding without any side effects.
+- A read-only mode for exploring and understanding without any side effects
 
-Enter with `/ask`. The assistant can read files, search code, and inspect your R/Python session — but cannot modify files, execute code, or use MCP tools.
+- Enter with `/ask` -- can read files, search code, and inspect your R/Python session — but cannot modify files, execute code, or use MCP tools
 
-Exit with `/normal`.
+- Exit with `/normal`
 
 ## Cleaning data
 
@@ -238,22 +231,28 @@ Open Posit Assistant, choose Cleaning mode, and ask it:
 
 For each prompt, explain:
 
+::: medium
+
 | Element | Purpose | Example |
 |---------|---------|---------|
 | **Why** | Your ultimate goal | *"I want to understand loan risk…"* |
 | **What** | Clear instructions | *"Fit a logistic regression…"* |
 | **How** | Tools to use | *"…using the `tidymodels` package"* |
 
+:::
+
+::: {.callout-tip appearance="simple"}
 Good prompts → "better", more targeted code.
+:::
 
 ## Analyzing data
 
 ::: {.demo}
 🖥️ **Demo:** 
 
-Clear the variables. Then ask Posit Assistant:
+Ask Posit Assistant:
 
-> *I'm trying to understand the factors associated with loan delinquencies. Please load `credit.csv`. Then fit a simple logistic regression to the data that uses `serious_dlqin_2yrs` as a response variable. Use the `stats` (R) / `statsmodels` (Python) package.*
+> *I'm trying to understand the factors associated with loan delinquencies. Please load `credit.csv`. Then fit a simple logistic regression to the data that uses `serious_dlqin_2yrs` as a response variable. Use the `tidymodels` (R) / `statsmodels` (Python) package.*
 
 Follow up until you understand what the model says.
 :::
@@ -265,7 +264,7 @@ Posit Assistant can remember context across sessions via **AGENTS.md** files:
 - **User-level** (`~/.posit/assistant/AGENTS.md`) — personal preferences
 - **Project-level** (`AGENTS.md` in repo root) — project facts, data schemas, conventions
 
-::: {.callout-tip}
+::: {.callout-tip appearance="simple"}
 Full docs: [assistant.posit.co/docs/features/memory](https://assistant.posit.co/docs/features/memory/)
 :::
 
@@ -295,14 +294,11 @@ Skills are **specialized modules of instructions** that Posit Assistant loads au
 
 :::
 
-## Custom skills {.smaller}
+## Custom skills
 
-You can add your own skills at two levels:
+- Add your own skills at the user or project levels
 
-- **User-level** — `~/.posit/assistant/skills/{skill-name}/` — available across all projects
-- **Project-level** — `.posit/assistant/skills/{skill-name}/` in your project root — scoped to one project
-
-Each skill is a folder with a `SKILL.md` file:
+- Each skill is a folder with a `SKILL.md` file:
 
 ```markdown
 ---
@@ -313,7 +309,7 @@ description: When to use this skill.
 Instructions for the assistant to follow when this skill is active.
 ```
 
-::: {.callout-tip}
+::: {.callout-tip appearance="simple"}
 Docs: [assistant.posit.co/docs/features/skills](https://assistant.posit.co/docs/features/skills/)
 :::
 
@@ -371,9 +367,10 @@ Run `/report` or `/notebook` in Posit Assistant to save your code. Then:
 
 ## Translating code between languages
 
-Posit Assistant is excellent at translating between **R and Python**.
+Excellent at translating between R and Python!
 
 
+::: {.demo}
 🖥️ **Demo:** 
 
 > *I'd like to experiment with this model fit. Turn `test.R` (or `test.py`) into a Shiny app that lets the user adjust parameters for creating the simulated dataset and then shows the results of fitting the model to the data. Include an action button so the model does not update until the user is finished describing the data.*
@@ -382,7 +379,7 @@ Posit Assistant is excellent at translating between **R and Python**.
 
 # Part 4: Next steps
 
-## Posit Assistant suggests next steps
+## Tips and suggestions
 
 As you work, Posit Assistant proactively surfaces **tips and suggestions** — things like improving your workflow, setting up memory, or using a relevant feature you might not know about.
 
@@ -390,11 +387,11 @@ As you work, Posit Assistant proactively surfaces **tips and suggestions** — t
 
 ## Next Edit Suggestions
 
-A separate AI feature — not Posit Assistant — built into Positron and RStudio.
+- A separate AI feature — not Posit Assistant — built into Positron and RStudio
 
-As you edit code, it **predicts and proposes your next change** inline, right in the editor. Tab to accept.
+- As you edit code, it predicts and proposes your next change inline, right in the editor -- tab to accept
 
-::: {.callout-note}
+::: {.callout-note appearance="simple"}
 Next Edit Suggestions requires a model provider configured in Positron, but operates independently of the Posit Assistant chat panel.
 :::
 
@@ -406,8 +403,8 @@ The easiest way to get started — a **managed LLM service from Posit**:
 - Access to a curated set of models
 - Designed to work seamlessly with Posit Assistant
 
-::: {.callout-tip}
-[assistant.posit.co/docs/getting-started/posit-ai](https://assistant.posit.co/docs/getting-started/posit-ai/)
+::: {.callout-tip appearance="simple"}
+Get started at [posit.ai](https://posit.ai/)!
 :::
 
 ## Thank you! {.center background-color="#2E4057" footer=false}
