@@ -169,7 +169,7 @@ Posit Assistant has **specialized modes** that adapt its behavior.
 
 ::: {.column}
 
-![](images/pa-modes.png){alt="Posit Assistant modes: Normal, Plan mode, Auto mode, Cleaning mode, Ask mode."}
+![](images/pa-modes.png){alt="Posit Assistant modes: Normal, Plan mode, Auto mode, Cleaning mode, Ask mode." width="400px"}
 
 :::
 
